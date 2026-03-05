@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 
 # Load trained model
-model = joblib.load(r"C:\Users\LENOVO\OneDrive\Datasets\Desktop\Streamlit_dep\laptop_model.pkl")
+model = joblib.load(r"laptop_model.pkl")
 
 st.set_page_config(page_title="Laptop Price Predictor", layout="centered")
 
@@ -50,3 +50,4 @@ if st.button("Predict Price"):
     prediction = model.predict(input_data)[0]
 
     st.success(f"💰 Estimated Laptop Price: ₹ {int(prediction):,}")
+
